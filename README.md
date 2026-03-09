@@ -1,5 +1,8 @@
 # n8n Template Explorer MCP
 
+[![npm version](https://img.shields.io/npm/v/n8n-template-explorer-mcp)](https://www.npmjs.com/package/n8n-template-explorer-mcp)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 A [Model Context Protocol (MCP)](https://modelcontextprotocol.io/) server that lets AI agents search, explore, and download workflow templates from the [n8n workflow library](https://n8n.io/workflows/).
 
 ## Tools
@@ -17,6 +20,12 @@ A [Model Context Protocol (MCP)](https://modelcontextprotocol.io/) server that l
 
 ## Installation
 
+### Quick (npx — no install needed)
+
+Just add the config below to your MCP client. It runs automatically via `npx`.
+
+### Manual (from source)
+
 ```bash
 git clone https://github.com/notsointresting/n8n-template-explorer-mcp.git
 cd n8n-template-explorer-mcp
@@ -27,14 +36,14 @@ npm install
 
 ### With Gemini CLI
 
-Add the following to your Gemini CLI MCP settings file (`~/.gemini/settings.json`):
+Add to `~/.gemini/settings.json`:
 
 ```json
 {
   "mcpServers": {
     "n8n-template-explorer": {
-      "command": "node",
-      "args": ["/absolute/path/to/n8n-template-explorer-mcp/server.js"]
+      "command": "npx",
+      "args": ["n8n-template-explorer-mcp"]
     }
   }
 }
@@ -42,14 +51,14 @@ Add the following to your Gemini CLI MCP settings file (`~/.gemini/settings.json
 
 ### With Claude Desktop
 
-Add to your Claude Desktop config (`claude_desktop_config.json`):
+Add to `claude_desktop_config.json`:
 
 ```json
 {
   "mcpServers": {
     "n8n-template-explorer": {
-      "command": "node",
-      "args": ["/absolute/path/to/n8n-template-explorer-mcp/server.js"]
+      "command": "npx",
+      "args": ["n8n-template-explorer-mcp"]
     }
   }
 }
@@ -57,15 +66,15 @@ Add to your Claude Desktop config (`claude_desktop_config.json`):
 
 ### With VS Code (GitHub Copilot)
 
-Add to your VS Code `settings.json`:
+Add to VS Code `settings.json`:
 
 ```json
 {
   "mcp": {
     "servers": {
       "n8n-template-explorer": {
-        "command": "node",
-        "args": ["/absolute/path/to/n8n-template-explorer-mcp/server.js"]
+        "command": "npx",
+        "args": ["n8n-template-explorer-mcp"]
       }
     }
   }
@@ -144,6 +153,12 @@ This server uses the [n8n public templates API](https://api.n8n.io/api/templates
 - **Transport:** StdioServerTransport
 - **HTTP client:** [axios](https://www.npmjs.com/package/axios)
 - **Validation:** [zod](https://www.npmjs.com/package/zod)
+
+## Disclaimer
+
+This is an **unofficial, community-built** project and is not affiliated with, endorsed by, or sponsored by [n8n GmbH](https://n8n.io/). "n8n" is a trademark of n8n GmbH.
+
+This server accesses n8n's publicly available templates API — the same data visible on [n8n.io/workflows](https://n8n.io/workflows/). No private data, authentication tokens, or proprietary code is used.
 
 ## License
 

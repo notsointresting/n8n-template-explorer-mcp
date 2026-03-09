@@ -1,19 +1,32 @@
 {
   "name": "n8n-template-explorer-mcp",
-  "version": "1.0.0",
-  "description": "",
+  "version": "1.0.1",
+  "description": "MCP server that lets AI agents search, explore, and download n8n workflow templates",
   "main": "server.js",
+  "bin": {
+    "n8n-template-explorer-mcp": "server.js"
+  },
   "scripts": {
     "start": "node server.js"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "n8n",
+    "n8n-workflows",
+    "workflow-automation",
+    "ai-agent"
+  ],
+  "author": "notsointresting",
   "license": "MIT",
   "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/notsointresting/n8n-template-explorer-mcp.git"
+  },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.27.1",
     "axios": "^1.13.6",
-    "cheerio": "^1.2.0",
     "zod": "^4.3.6"
   }
 }
