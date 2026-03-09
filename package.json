@@ -1,0 +1,19 @@
+{
+  "name": "n8n-template-explorer-mcp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "type": "module",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.27.1",
+    "axios": "^1.13.6",
+    "cheerio": "^1.2.0",
+    "zod": "^4.3.6"
+  }
+}
